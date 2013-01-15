@@ -1,0 +1,1 @@
+lessc ./less/all.less > ./css/all.css
