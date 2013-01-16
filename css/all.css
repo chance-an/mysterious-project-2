@@ -5115,11 +5115,15 @@ a.badge:hover {
 .affix {
   position: fixed;
 }
+body {
+  background-color: #c0c0c0;
+}
 .container {
   width: 100%;
   margin-bottom: 10px;
 }
 .lane {
+  float: left;
   display: inline-block;
   border-style: solid;
   border-color: transparent;
@@ -5226,6 +5230,14 @@ a.badge:hover {
 .meme .content {
   margin: 0.5em;
 }
+.meme .content h3.name {
+  font-size: 32pt;
+  color: #000;
+}
 .meme .content .biography {
   margin-top: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 14pt;
+  text-align: justify;
 }

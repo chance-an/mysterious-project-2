@@ -28,7 +28,7 @@
 
     function setupUI(){
         $(window).on('resize', _.debounce(renderData));
-        $(window).on('scroll', _.debounce(renderData));
+        $(document).on('scroll', _.debounce(renderData));
     }
 
     function installData(response){
@@ -41,12 +41,16 @@
         }
         _rendering = true;
         var signal = new $.Deferred();
+
         adjustColumns();
 
+        function isColumnFull(columnEntry){
+            // if there is only one column, (mobile devices case), then the column never gets full
+            var columnLimit = columnsCount === 1 ? Infinity : dimension.viewportBottom;
+            return columnEntry.height >= columnLimit ;
+        }
         function getUnfilledColumns(){
-            return _.filter(_columns, function(e){
-                return e.height < dimension.viewportBottom;
-            })
+            return _.reject(_columns, isColumnFull);
         }
 
         function getExistingMemes(){
@@ -55,12 +59,10 @@
             }), function(pv, cv) { return pv + cv; }, 0);
         }
 
-        var dimension = getDimension();
-        var columnsCount = _columns.length;
-
         var columnsRotation = 0;
         var memeCounter = getExistingMemes(); // start from the next meme : (count on existing ones + 1)
-
+        var dimension = getDimension();
+        var columnsCount = _columns.length;
 
         function iteration(){
             dimension = getDimension();
@@ -81,9 +83,11 @@
             while(true){
                 var laneID = (columnsRotation++) % columnsCount;
                 var columnEntry = _columns[laneID];
-                if(columnEntry.height >= dimension.viewportBottom){
+
+                if(isColumnFull(columnEntry)){
                     continue;
                 }
+
                 break;
             }
 
@@ -156,18 +160,26 @@
     _.extend(Meme.prototype, {
         getPresentation: function(){
             if(!this._$ui){
-                var template = _.template(getTemplateElement('meme'), this._data);
+                // randomly pick on picture from this._data['picture'] for ['picture']
+                var viewVariables = _.extend({}, this._data, {
+                    picture: this._data['picture'][Math.floor(Math.random() * this._data['picture'].length)]
+                });
+                var template = _.template(getTemplateElement('meme'), viewVariables);
                 this._$ui = $(template);
             }
 
             // whether this html section has any imgs? if there any preload it
             var signals = _.map(this._$ui.find('img'), function(img){
                 var src = $(img).attr('src');
-                return UTILITY.preloadImage(src).pipe(function($preloadImg, dimension){
+                var signal = new $.Deferred();
+                UTILITY.preloadImage(src).pipe(function($preloadImg, dimension){
                     if(dimension.width > MEME_WIDTH *.9){
                         $(img).width(MEME_WIDTH *.9);
                     }
+                }).always(function(){ // resolve even if the request wasn't successful
+                    signal.resolve();
                 });
+                return signal;
             });
 
             $.when.apply(null, signals);

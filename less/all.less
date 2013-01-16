@@ -1,12 +1,16 @@
 @import "bootstrap.less";
 
+body{
+  background-color: #c0c0c0;
+}
+
 .container{
   width: 100%;
   margin-bottom: 10px;
 }
 
 .lane{
-//  float: left;
+  float: left;
   display: inline-block;
   border-style: solid;
   border-color: transparent;
@@ -19,13 +23,23 @@
   margin-bottom: 0em;
   padding: 0;
   display: block;
+//  float: left;
 
 
   .content{
     margin: 0.5em;
 
+    h3.name{
+      font-size: 32pt;
+      color: #000;
+    }
+
     .biography{
       margin-top: 0.5em;
+      margin-left: 1em;
+      margin-right: 1em;
+      font-size: 14pt;
+      text-align: justify;
     }
   }
 }
