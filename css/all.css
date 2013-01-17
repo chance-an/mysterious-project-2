@@ -5241,11 +5241,7 @@ body {
   font-size: 14pt;
   text-align: justify;
 }
-.meme .content .form-actions {
-  text-align: right;
-}
 .meme .content img.share {
-  margin-right: 3em;
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */

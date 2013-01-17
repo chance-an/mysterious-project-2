@@ -7,12 +7,17 @@
 (function(){
     var MEME_WIDTH = 480;
     var COLUMN_SPACING = 10;
+    var THIS_WEB_PAGE = window.location.href;
+    var FACEBOOK_APP_ID = 550779301601511;
     var _data = null;
     var _columns = [];
     var _rendering = false;
 
     function initialize(){
-        downloadData().done(setupUI);
+        $.when(
+            Facebook.initialize(),
+            downloadData()
+        ).done(setupUI);
     }
 
     function downloadData(){
@@ -36,6 +41,7 @@
     }
 
     function renderData(){
+
         if(_rendering ){
             return;
         }
@@ -154,6 +160,7 @@
 
     function Meme(data){
         this._data = data;
+        this._viewVariables = null;
         this._$ui = null;
     }
 
@@ -166,8 +173,8 @@
                 });
                 var template = _.template(getTemplateElement('meme'), viewVariables);
                 this._$ui = $(template);
+                this._viewVariables = viewVariables;
             }
-
             // whether this html section has any imgs? if there any preload it
             var signals = _.map(this._$ui.find('img'), function(img){
                 var src = $(img).attr('src');
@@ -185,8 +192,16 @@
             $.when.apply(null, signals);
 
             return $.when.apply(null, signals).pipe(_.bind(function(){
+                this._bindEvents();
                 return this._$ui;
             }, this));
+        },
+
+        _bindEvents: function(){
+            var instance = this;
+            this._$ui.find('img.share').on('click', function(){
+                Facebook.showFeedDialog(instance);
+            });
         },
 
         getDimension: function(){
@@ -194,7 +209,105 @@
                 width: MEME_WIDTH,
                 height: this._$ui && this._$ui.height() || 0
             };
+        },
+
+        getViewVariableByName: function(name){
+            return this._viewVariables[name];
+        },
+
+        getViewImagePath: function(){
+            var imgUrl = this.getViewVariableByName('picture');
+            if(imgUrl.match(/^http/i)){
+                return imgUrl;
+            }
+            return THIS_WEB_PAGE.replace(/\/([^\/])*$/, '') + ('/' + imgUrl).replace(/\/{2+}/g, '/');
         }
     });
 
+
+    //Facebook integration
+    var Facebook = {
+        initialize:  function (){
+            var deferred = new $.Deferred();
+
+            window.fbAsyncInit = function() {
+
+                FB.init({
+                    appId      : FACEBOOK_APP_ID, // App ID
+                    channelUrl : '//channel.html', // Channel File
+                    status     : true, // don't check login status
+                    cookie     : true, // enable cookies to allow the server to access the session
+                    xfbml      : false,  // parse XFBML,
+                    logging    : true
+                });
+
+                // Additional initialization code here
+                //notification
+                deferred.resolve((new Date()).getTime());
+            };
+
+            (function(d){
+                var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+                js = d.createElement('script'); js.id = id; js.async = true;
+                js.src = "//connect.facebook.net/en_US/all.js";
+                d.getElementsByTagName('head')[0].appendChild(js);
+            }(document));
+
+            return deferred;
+        },
+
+        showFeedDialog: function(meme){
+            var obj = {
+                method: 'feed',
+//                redirect_uri: THIS_WEB_PAGE,
+                link: THIS_WEB_PAGE,
+                picture: meme.getViewImagePath(),
+                name: 'Share My Inspiration',
+                caption: meme.getViewVariableByName('name'),
+                description: meme.getViewVariableByName('bio'),
+                display: 'dialog'
+            };
+
+            //show the dialog only when user is logged in
+            Facebook.isUserLoggedIn().done(function(){
+//                FB.ui(obj, callbackFunction);
+                FB.ui(obj);
+            });
+        },
+
+        isUserLoggedIn: function(){
+            var deferred = new $.Deferred();
+
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    // connected
+                    deferred.resolve();
+                } else {
+                    // not_logged_in, try log in
+                    Facebook.login().done(function(){
+                        deferred.resolve();
+                    });
+                }
+            });
+
+            return deferred;
+        },
+
+        login: function (){
+            var deferred = new $.Deferred();
+
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    // connected
+                    deferred.resolve();
+                } else {
+                    // cancelled
+                    deferred.reject();
+                }
+            });
+
+            return deferred;
+        }
+
+    }
 })();
