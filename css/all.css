@@ -5117,10 +5117,14 @@ a.badge:hover {
 }
 body {
   background-color: #c0c0c0;
+  text-align: center;
 }
-.container {
-  width: 100%;
+body > .container {
+  width: auto;
   margin-bottom: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lane {
   float: left;
