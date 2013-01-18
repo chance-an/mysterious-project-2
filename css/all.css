@@ -5245,194 +5245,106 @@ body > .container {
   font-size: 14pt;
   text-align: justify;
 }
-.meme .content img.share {
+.meme .content .compound-button {
   display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  padding: 4px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  color: #333333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #e6e6e6;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border: 1px solid #bbbbbb;
-  *border: 0;
-  border-bottom-color: #a2a2a2;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  *margin-left: .3em;
+  position: relative;
+  margin-right: 1em;
+}
+.meme .content .compound-button input[type="button"] {
+  width: 70px;
+  height: 60px;
+}
+.meme .content .compound-button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.meme .content .compound-button[name="wiki"] {
+  border: 1px #050505 solid;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  border-color: #c5c5c5;
-  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
-  background-color: transparent;
-}
-.meme .content img.share:hover,
-.meme .content img.share:active,
-.meme .content img.share.active,
-.meme .content img.share.disabled,
-.meme .content img.share[disabled] {
-  color: #333333;
-  background-color: #e6e6e6;
-  *background-color: #d9d9d9;
-}
-.meme .content img.share:active,
-.meme .content img.share.active {
-  background-color: #cccccc \9;
-}
-.meme .content img.share:first-child {
-  *margin-left: 0;
-}
-.meme .content img.share:hover {
-  color: #333333;
-  text-decoration: none;
-  background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
-}
-.meme .content img.share:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.meme .content img.share.active,
-.meme .content img.share:active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-}
-.meme .content img.share.disabled,
-.meme .content img.share[disabled] {
-  cursor: default;
-  background-image: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.meme .content img.share .label,
-.meme .content img.share .badge {
-  position: relative;
-  top: -1px;
-}
-.meme .content img.share:active {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  padding: 4px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  color: #333333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #e6e6e6;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border: 1px solid #bbbbbb;
-  *border: 0;
-  border-bottom-color: #a2a2a2;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  *margin-left: .3em;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  border-color: #c5c5c5;
-  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
 }
-.meme .content img.share:active:hover,
-.meme .content img.share:active:active,
-.meme .content img.share:active.active,
-.meme .content img.share:active.disabled,
-.meme .content img.share:active[disabled] {
-  color: #333333;
-  background-color: #e6e6e6;
-  *background-color: #d9d9d9;
+.meme .content .compound-button[name="wiki"] input {
+  color: #656565;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #535557;
+  background-image: -moz-linear-gradient(top, #7b8083, #181415);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7b8083), to(#181415));
+  background-image: -webkit-linear-gradient(top, #7b8083, #181415);
+  background-image: -o-linear-gradient(top, #7b8083, #181415);
+  background-image: linear-gradient(to bottom, #7b8083, #181415);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7b8083', endColorstr='#ff181415', GradientType=0);
+  border-color: #181415 #181415 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #181415;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.meme .content img.share:active:active,
-.meme .content img.share:active.active {
-  background-color: #cccccc \9;
+.meme .content .compound-button[name="wiki"] input:hover,
+.meme .content .compound-button[name="wiki"] input:active,
+.meme .content .compound-button[name="wiki"] input.active,
+.meme .content .compound-button[name="wiki"] input.disabled,
+.meme .content .compound-button[name="wiki"] input[disabled] {
+  color: #656565;
+  background-color: #181415;
+  *background-color: #0a0809;
 }
-.meme .content img.share:active:first-child {
-  *margin-left: 0;
+.meme .content .compound-button[name="wiki"] input:active,
+.meme .content .compound-button[name="wiki"] input.active {
+  background-color: #000000 \9;
 }
-.meme .content img.share:active:hover {
-  color: #333333;
-  text-decoration: none;
-  background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
+.meme .content .compound-button[name="wiki"]:before {
+  background-image: url('../img/light_bulb.png');
 }
-.meme .content img.share:active:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+.meme .content .compound-button[name="wiki"]:active input,
+.meme .content .compound-button[name="wiki"]:hover input {
+  color: #7b8083;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #464545;
+  background-image: -moz-linear-gradient(top, #656565, #181415);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#656565), to(#181415));
+  background-image: -webkit-linear-gradient(top, #656565, #181415);
+  background-image: -o-linear-gradient(top, #656565, #181415);
+  background-image: linear-gradient(to bottom, #656565, #181415);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff656565', endColorstr='#ff181415', GradientType=0);
+  border-color: #181415 #181415 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #181415;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.meme .content img.share:active.active,
-.meme .content img.share:active:active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+.meme .content .compound-button[name="wiki"]:active input:hover,
+.meme .content .compound-button[name="wiki"]:hover input:hover,
+.meme .content .compound-button[name="wiki"]:active input:active,
+.meme .content .compound-button[name="wiki"]:hover input:active,
+.meme .content .compound-button[name="wiki"]:active input.active,
+.meme .content .compound-button[name="wiki"]:hover input.active,
+.meme .content .compound-button[name="wiki"]:active input.disabled,
+.meme .content .compound-button[name="wiki"]:hover input.disabled,
+.meme .content .compound-button[name="wiki"]:active input[disabled],
+.meme .content .compound-button[name="wiki"]:hover input[disabled] {
+  color: #7b8083;
+  background-color: #181415;
+  *background-color: #0a0809;
 }
-.meme .content img.share:active.disabled,
-.meme .content img.share:active[disabled] {
-  cursor: default;
-  background-image: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+.meme .content .compound-button[name="wiki"]:active input:active,
+.meme .content .compound-button[name="wiki"]:hover input:active,
+.meme .content .compound-button[name="wiki"]:active input.active,
+.meme .content .compound-button[name="wiki"]:hover input.active {
+  background-color: #000000 \9;
 }
-.meme .content img.share:active .label,
-.meme .content img.share:active .badge {
-  position: relative;
-  top: -1px;
+.meme .content .compound-button[name="share"]:before {
+  background-image: url('../img/red_heart.png');
 }

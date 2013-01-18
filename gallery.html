@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html xmlns="http://www.w3.org/1999/html" >
 <head >
     <meta charset="utf-8">
     <meta name = "viewport" content = "width = device-width,initial-scale=1, maximum-scale=1">
@@ -19,7 +19,6 @@
 
     </div>
 
-
     <script name="template-meme" type="text/html">
         <div class="meme">
             <div class="content">
@@ -28,7 +27,14 @@
                 <h4><%=role %></h4>
                 <p class="biography"><%=bio %></p>
                 <div class="form-actions">
-                    <img src="img/red_heart.png" class="share">
+                    <a href="<%=wiki %>">
+                        <div name="wiki" class="compound-button">
+                            <input type="button" class="btn">
+                        </div>
+                    </a>
+                    <div name="share" class="compound-button">
+                        <input type="button" class="btn">
+                    </div>
                 </div>
             </div>
         </div>

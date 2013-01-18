@@ -199,7 +199,7 @@
 
         _bindEvents: function(){
             var instance = this;
-            this._$ui.find('img.share').on('click', function(){
+            this._$ui.find('[name="share"].compound-button').on('click', function(){
                 Facebook.showFeedDialog(instance);
             });
         },
@@ -235,7 +235,7 @@
                 FB.init({
                     appId      : FACEBOOK_APP_ID, // App ID
                     channelUrl : '//channel.html', // Channel File
-                    status     : true, // don't check login status
+                    status     : true, // check login status
                     cookie     : true, // enable cookies to allow the server to access the session
                     xfbml      : false,  // parse XFBML,
                     logging    : true
@@ -259,7 +259,7 @@
         showFeedDialog: function(meme){
             var obj = {
                 method: 'feed',
-//                redirect_uri: THIS_WEB_PAGE,
+                redirect_uri: THIS_WEB_PAGE,
                 link: THIS_WEB_PAGE,
                 picture: meme.getViewImagePath(),
                 name: 'Share My Inspiration',
