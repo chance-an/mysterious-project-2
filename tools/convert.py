@@ -18,7 +18,7 @@ def convert():
         'name' : row[0],
         'picture': list( map(lambda picture_entry:
             picture_entry.startswith('http') and picture_entry or 'img/people/' + picture_entry,
-            map(lambda picture: picture.strip(), row[1].split(',')))
+            filter(lambda filename: len(filename) != 0, map(lambda picture: picture.strip(), row[1].split(' '))))
         ),
         'role': row[2],
         'bio' : row[3],

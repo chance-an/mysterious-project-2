@@ -2,181 +2,190 @@
  "error": null,
  "data": [
   {
-   "role": "Abolitionist & Womens Rights Activist  ",
-   "wiki": "http://en.wikipedia.org/wiki/Sojourner_Truth",
+   "name": "Grace Murray Hopper",
    "picture": [
-    "img/people/Truth1.jpg",
-    "img/people/Truth2.jpg"
+    "img/people/GraceMurrayHopper.jpg"
    ],
-   "name": "Sojour Truth",
-   "bio": "Born into slavery in Ulster county, New York, but escaped with her daughter to freedom in 1826. Her best-known extemporaneous speech on gender inequalities, \"Ain't I a Woman?\", was delivered in 1851 at the Ohio Women's Rights Convention in Akron, Ohio."
+   "role": "American Computer Scientist and United States Navy Officer ",
+   "bio": "Grace Murray Hopper was an American computer scientist and US Navy officer. A pioneer in the field, she was one of the first programmers of the Harvard Mark I computer, and developed the first compiler for computer programing language. She is credited with popularizing the term \"debugging\" for fixing computer glitches.",
+   "wiki": "http://en.wikipedia.org/wiki/Grace_Hopper"
   },
   {
-   "role": "Civil Rights Activist",
-   "wiki": "http://en.wikipedia.org/wiki/Rosa_Parks",
+   "name": "Eleanor Roosevelt",
    "picture": [
-    "img/people/Rosa Park1.jpg",
-    "img/people/Rosapark2.jpg",
-    "img/people/RosaPark3.jpg"
+    "img/people/Roosevelt1.jpg"
    ],
-   "name": "Rosa Parks ",
-   "bio": "On December 1, 1955, Rosa Parks sparked a pivoting point in US History when she refused to obey bus a driver's order that she give up her seat in the colored section to a white passenger."
-  },
-  {
-   "role": "Monarch",
-   "wiki": "http://en.wikipedia.org/wiki/Queen_Elizabeth_II",
-   "picture": [
-    "img/people/Queen1.jpg",
-    "img/people/Queen2.jpg"
-   ],
-   "name": "Queen Elizabeth II",
-   "bio": "Elizabeth II has quietly become one of the longest-reigning monarchs in English history. In addition, Elizabeth II has started new trends toward modernization and openness in the royal family. \n\n\n"
-  },
-  {
-   "role": "America Physicist & Astronaut",
-   "wiki": "http://en.wikipedia.org/wiki/Sally_Ride",
-   "picture": [
-    "img/people/Sally1.jpg",
-    "img/people/Sally2.jpg",
-    "img/people/Sally3.jpg"
-   ],
-   "name": "Sally Ride",
-   "bio": "On June 18, 1983 Sally Ride became the first American woman in space aboard the space shuttle Challenger. As a mission specialist, she helped deploy satellites and worked other projects."
-  },
-  {
-   "role": "Inventor and Actress",
-   "wiki": "http://en.wikipedia.org/wiki/Hedy_Lamarr",
-   "picture": [
-    "img/people/Hedylamarr1.jpg",
-    "img/people/HedyLamarr2.jpg"
-   ],
-   "name": "Hedy Lamarr",
-   "bio": "Austrian actress who became a pioneer in the field of wireless communication following her emigration to the United States.Helped develop a secret communication system to help combat the Nazis "
-  },
-  {
-   "role": "Business Woman and Fashion Desinger",
-   "wiki": "http://en.wikipedia.org/wiki/Coco_Chanel",
-   "picture": [
-    "img/people/Coco1.jpg",
-    "img/people/Coco2.jpg"
-   ],
-   "name": "Coco Chanel",
-   "bio": "Chanel was raised in orphanages where she was taught to sew. She had a brief career as a singer before opening her first clothes shop in 1910. In the 1920s she becameone of 20th centuries best knows fashion desingers. "
-  },
-  {
-   "role": "Journalist ",
-   "wiki": "http://en.wikipedia.org/wiki/Christian_Amanpour",
-   "picture": [
-    "img/people/Christian1.jpg",
-    "img/people/Christian2.jpg"
-   ],
-   "name": "Christian Amanpour",
-   "bio": " Award winning television news reporter, she is considered one of today's leading news correspondents. Christiane Amanpour has covered many of the world's most dangerous conflicts and devastating events."
-  },
-  {
    "role": "First Lady of the United States",
-   "wiki": "http://en.wikipedia.org/wiki/Betty_Ford",
-   "picture": [
-    "img/people/BettyFord.jpg",
-    "img/people/Betty2.jpg"
-   ],
-   "name": "Betty Ford",
-   "bio": "Betty Ford was known both as a former First Lady and as the founder of the Betty Ford Clinic for substance abuse recovery."
+   "bio": " As First Lady, writer, and humanitarian, Eleanor was one of the most outspoken women in the White House. She carried a strong dedication to social and civic issues of her time. ",
+   "wiki": "http://en.wikipedia.org/wiki/Eleanor_Roosevelt"
   },
   {
-   "role": "Physicist & Chemist",
-   "wiki": "http://en.wikipedia.org/wiki/Marie_Curie",
-   "picture": [
-    "img/people/Marie1.jpg",
-    "img/people/Marie2.jpg"
-   ],
-   "name": "Marie Curie",
-   "bio": "Marie Curie became the first woman to win a Nobel Prize and the only woman to win the award in two different fields (physics and chemistry). Curie's efforts led to the discovery of polonium and radium and, the development of X-ray."
-  },
-  {
-   "role": "Marine Biologist and Conservationist",
-   "wiki": "http://en.wikipedia.org/wiki/Rachel_Carson",
-   "picture": [
-    "img/people/RachelCarson.jpg",
-    "img/people/RachelCarson1.jpg"
-   ],
-   "name": "Rachel Carson",
-   "bio": "Biologist Rachel Carson alerted the world to the environmental impact of fertilizers and pesticides. Her best-known book, Silent Spring, led to a presidential commission that largely endorsed her findings and helped to shape a growing environmental consciousness."
-  },
-  {
-   "role": "American Modern Dance Choreographer ",
-   "wiki": "http://en.wikipedia.org/wiki/Martha_Graham",
+   "name": "Martha Grahm",
    "picture": [
     "img/people/MarthaGrahm.jpg",
     "img/people/MarthaGrahm2.jpg",
     "img/people/MarthaGrahm3.jpg"
    ],
-   "name": "Martha Grahm",
-   "bio": "Graham is called the Mother of Modern Dance. She was a dancer, choreographer, and teacher for more than 70 years, and during that time she changed the landscape of dance forever. An unlikely candidate for a dance diva, she was shorter and more muscular than the principal ballet dancers of her time. "
+   "role": "American Modern Dance Choreographer ",
+   "bio": "Graham is called the Mother of Modern Dance. She was a dancer, choreographer, and teacher for more than 70 years, and during that time she changed the landscape of dance forever. An unlikely candidate for a dance diva, she was shorter and more muscular than the principal ballet dancers of her time. ",
+   "wiki": "http://en.wikipedia.org/wiki/Martha_Graham"
   },
   {
-   "role": "Mathematician and Philosopher",
-   "wiki": "http://en.wikipedia.org/wiki/Hypatia",
+   "name": "Sojour Truth",
+   "picture": [
+    "img/people/Truth1.jpg",
+    "img/people/Truth2.Jpg"
+   ],
+   "role": "Abolitionist & Womens Rights Activist  ",
+   "bio": "Born into slavery in Ulster county, New York, but escaped with her daughter to freedom in 1826. Her best-known extemporaneous speech on gender inequalities, \"Ain't I a Woman?\", was delivered in 1851 at the Ohio Women's Rights Convention in Akron, Ohio.",
+   "wiki": "http://en.wikipedia.org/wiki/Rachel_Carson"
+  },
+  {
+   "name": "Rosa Parks ",
+   "picture": [
+    "img/people/Rosapark1.jpg",
+    "img/people/Rosapark2.jpg",
+    "img/people/RosaPark3.jpg"
+   ],
+   "role": "Civil Rights Activist",
+   "bio": "On December 1, 1955, Rosa Parks sparked a pivoting point in US History when she refused to obey a bus driver's order that she give up her seat in the colored section to a white passenger.",
+   "wiki": "http://en.wikipedia.org/wiki/Rosa_Parks"
+  },
+  {
+   "name": "Queen Elizabeth II",
+   "picture": [
+    "img/people/Queen1.jpg",
+    "img/people/Queen2.jpg"
+   ],
+   "role": "Monarch",
+   "bio": "Elizabeth II has quietly become one of the longest-reigning monarchs in English history. In addition, Elizabeth II has started new trends toward modernization and openness in the royal family. \n\n\n",
+   "wiki": "http://en.wikipedia.org/wiki/Queen_Elizabeth_II"
+  },
+  {
+   "name": "Sally Ride",
+   "picture": [
+    "img/people/Sally1.jpg",
+    "img/people/Sally2.jpg",
+    "img/people/Sally3.jpg"
+   ],
+   "role": "America Physicist & Astronaut",
+   "bio": "On June 18, 1983 Sally Ride became the first American woman in space aboard the space shuttle Challenger. As a mission specialist, she helped deploy satellites and worked other projects.",
+   "wiki": "http://en.wikipedia.org/wiki/Sally_Ride"
+  },
+  {
+   "name": "Hedy Lamarr",
+   "picture": [
+    "img/people/Hedylamarr1.jpg",
+    "img/people/HedyLamarr2.jpg"
+   ],
+   "role": "Inventor and Actress",
+   "bio": "Austrian actress who became a pioneer in the field of wireless communication following her emigration to the United States. Helped develop a secret communication system to help combat the Nazis. ",
+   "wiki": "http://en.wikipedia.org/wiki/Hedy_Lamarr"
+  },
+  {
+   "name": "Coco Chanel",
+   "picture": [
+    "img/people/Coco1.jpg",
+    "img/people/Coco2.jpg"
+   ],
+   "role": "Business Woman and Fashion Desinger",
+   "bio": "Chanel was raised in orphanages where she was taught to sew. She had a brief career as a singer before opening her first clothes shop in 1910. In the 1920s she becameone of 20th centuries best knows fashion desingers. ",
+   "wiki": "http://en.wikipedia.org/wiki/Coco_Chanel"
+  },
+  {
+   "name": "Christian Amanpour",
+   "picture": [
+    "img/people/Christian1.jpg",
+    "img/people/Christian2.jpg"
+   ],
+   "role": "Journalist ",
+   "bio": " Award winning television news reporter, she is considered one of today's leading news correspondents. Christiane Amanpour has covered many of the world's most dangerous conflicts and devastating events.",
+   "wiki": "http://en.wikipedia.org/wiki/Christian_Amanpour"
+  },
+  {
+   "name": "Betty Ford",
+   "picture": [
+    "img/people/BettyFord.jpg",
+    "img/people/Betty2.jpg"
+   ],
+   "role": "First Lady of the United States",
+   "bio": "Betty Ford was known both as a former First Lady and as the founder of the Betty Ford Clinic for substance abuse recovery.",
+   "wiki": "http://en.wikipedia.org/wiki/Betty_Ford"
+  },
+  {
+   "name": "Amelia Earhart",
+   "picture": [
+    "img/people/AmeliaEarhart.jpg"
+   ],
+   "role": "American Aviation Pioneer  ",
+   "bio": "Earhart was the first female pilot to fly solo across the Atlantic Ocean",
+   "wiki": "http://en.wikipedia.org/wiki/Amelia_Erhart"
+  },
+  {
+   "name": "Marie Curie",
+   "picture": [
+    "img/people/Marie1.jpg",
+    "img/people/Marie2.jpg"
+   ],
+   "role": "Physicist & Chemist",
+   "bio": "Marie Curie became the first woman to win a Nobel Prize and the only woman to win the award in two different fields (physics and chemistry). Curie's efforts led to the discovery of polonium and radium and, the development of X-ray.",
+   "wiki": "http://en.wikipedia.org/wiki/Marie_Curie"
+  },
+  {
+   "name": "Rachel Carson",
+   "picture": [
+    "img/people/RachelCarson.jpg",
+    "img/people/RachelCarson1.jpg"
+   ],
+   "role": "Marine Biologist and Conservationist",
+   "bio": "Biologist Rachel Carson alerted the world to the environmental impact of fertilizers and pesticides. Her best-known book, Silent Spring, led to a presidential commission that largely endorsed her findings and helped to shape a growing environmental consciousness.",
+   "wiki": "http://en.wikipedia.org/wiki/Rachel_Carson"
+  },
+  {
+   "name": "Hypatia",
    "picture": [
     "img/people/hypatia.jpg"
    ],
-   "name": "Hypatia",
-   "bio": "Know as the ancient world's most famous mathematician, philosopher, and astronomer. "
+   "role": "Mathematician and Philosopher",
+   "bio": "Know as the ancient world's most famous mathematician, philosopher, and astronomer. ",
+   "wiki": "http://en.wikipedia.org/wiki/Hypatia"
   },
   {
-   "role": "Actress & Firrst Female Studio Owner",
-   "wiki": "http://en.wikipedia.org/wiki/Lucy_Ball",
-   "picture": [
-    "img/people/Lucy1.jpg",
-    "img/people/Lucy2.jpg"
-   ],
    "name": "Lucille Ball",
-   "bio": "First woman in show business to own a film studio."
+   "picture": [
+    "img/people/lucy1.jpg",
+    "img/people/lucy2.jpg"
+   ],
+   "role": "Actress & Firrst Female Studio Owner",
+   "bio": "First woman in show business to own a film studio.",
+   "wiki": "http://en.wikipedia.org/wiki/Lucy_Ball"
   },
   {
-   "role": "Queen consort of Jordan as the wife of King Abdullah II of Jordan.",
-   "wiki": "http://en.wikipedia.org/wiki/Queen_Rania",
-   "picture": [
-    "img/people/"
-   ],
-   "name": "Queen Rania of Jordan",
-   "bio": ""
-  },
-  {
-   "role": "American Chef & Author",
-   "wiki": "http://en.wikipedia.org/wiki/Julia_Child",
-   "picture": [
-    "img/people/JuliaChild.jpg"
-   ],
    "name": "Julia Child ",
-   "bio": "American TV chef and author, Julia Child adapted sophisticated French cuisine for mainstream Americans, she collaborated on a two-volume cookbook called Mastering the Art of French Cooking, which was considered groundbreaking."
+   "picture": [
+    "img/people/juliachild.jpg"
+   ],
+   "role": "American Chef & Author",
+   "bio": "American TV chef and author, Julia Child adapted sophisticated French cuisine for mainstream Americans, she collaborated on a two-volume cookbook called Mastering the Art of French Cooking, which was considered groundbreaking.",
+   "wiki": "http://en.wikipedia.org/wiki/Julia_Child"
   },
   {
-   "role": "First Lady of the United States",
-   "wiki": "http://en.wikipedia.org/wiki/Nancy_Reagan",
+   "name": "Nancy Reagan",
    "picture": [
     "img/people/NancyReagan.jpg"
    ],
-   "name": "Nancy Reagan",
-   "bio": " Nancy Reagan is a former first lady of the United States. She served as first lady of California before moving into the White House. Her major initiative was the \"Just Say No\" drug awareness campaign. "
-  },
-  {
-   "role": "British Politician and Former Prime Minister of the United Kingdom",
-   "wiki": "http://en.wikipedia.org/wiki/Margaret_thatcher",
-   "picture": [
-    "img/people/"
-   ],
-   "name": "Margaret Thatcher",
-   "bio": ""
-  },
-  {
    "role": "First Lady of the United States",
-   "wiki": "http://en.wikipedia.org/wiki/Eleanor_Roosevelt",
+   "bio": "Nancy Reagan is a former first lady of the United States. She served as first lady of California before moving into the White House. Her major initiative was the \"Just Say No\" drug awareness campaign. ",
+   "wiki": "http://en.wikipedia.org/wiki/Nancy_Reagan"
+  },
+  {
+   "name": "Toni Morrison",
    "picture": [
-    "img/people/Roosevelt1.jpg"
+    "img/people/ToniMorrison.jpg"
    ],
-   "name": "Eleanor Roosevelt",
-   "bio": " As First Lady, writer, and humanitarian, Eleanor was one of the most outspoken women in the White House. She carried a strong dedication to social and civic issues of her time. "
+   "role": "American Novelist, Editor, and Professor",
+   "bio": "American novelist, editor, and professor. Her novels are known for their epic themes, vivid dialogue, and richly detailed characters.",
+   "wiki": "http://en.wikipedia.org/wiki/Toni_Morrison"
   }
  ]
 }
