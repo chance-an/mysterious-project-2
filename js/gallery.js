@@ -227,6 +227,8 @@
 
     //Facebook integration
     var Facebook = {
+        FEED_SERVICE_ENTRY_POINT: 'https://www.facebook.com/dialog/feed',
+
         initialize:  function (){
             var deferred = new $.Deferred();
 
@@ -256,7 +258,7 @@
             return deferred;
         },
 
-        showFeedDialog: function(meme){
+        showFeedDialogOld: function(meme){
             var obj = {
                 method: 'feed',
                 redirect_uri: THIS_WEB_PAGE,
@@ -273,6 +275,26 @@
 //                FB.ui(obj, callbackFunction);
                 FB.ui(obj);
             });
+        },
+
+        showFeedDialog: function(meme){
+            var parameters = {
+                app_id: FACEBOOK_APP_ID,
+                redirect_uri: THIS_WEB_PAGE,
+                link: THIS_WEB_PAGE,
+                picture: meme.getViewImagePath(),
+                name: 'Share My Inspiration',
+                caption: meme.getViewVariableByName('name'),
+                description: meme.getViewVariableByName('bio')
+            };
+
+            window.location = Facebook.FEED_SERVICE_ENTRY_POINT + '?' + _.map(parameters, function(v, k){
+                return k + '=' + encodeURIComponent(v);
+            }).join('&');
+
+//            window.location = 'https://www.facebook.com/dialog/feed?app_id=458358780877780&link=https://developers.facebook.com/docs/reference/dialogs/&picture=http://fbrell.com/f8.jpg&'
+//                +"name=Facebook%20Dialogs&caption=Reference%20Documentation&description=Using%20Dialogs%20to%20interact%20with%20users.&redirect_uri=https://mighty-lowlands-6381.herokuapp.com/";
+
         },
 
         isUserLoggedIn: function(){
