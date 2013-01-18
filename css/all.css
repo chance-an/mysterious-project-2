@@ -5249,10 +5249,22 @@ body > .container {
   display: inline-block;
   position: relative;
   margin-right: 1em;
+  border: 1px #050505 solid;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .meme .content .compound-button input[type="button"] {
   width: 70px;
   height: 60px;
+}
+.meme .content .compound-button:after {
+  font-size: 16pt;
+  color: #0088cc;
+  line-height: 17pt;
 }
 .meme .content .compound-button:before {
   content: "";
@@ -5262,15 +5274,6 @@ body > .container {
   height: 60px;
   background-repeat: no-repeat;
   background-position: center;
-}
-.meme .content .compound-button[name="wiki"] {
-  border: 1px #050505 solid;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }
 .meme .content .compound-button[name="wiki"] input {
   color: #656565;
@@ -5345,6 +5348,14 @@ body > .container {
 .meme .content .compound-button[name="wiki"]:hover input.active {
   background-color: #000000 \9;
 }
+.meme .content .compound-button[name="wiki"]:after {
+  content: 'Wiki';
+  display: block;
+}
 .meme .content .compound-button[name="share"]:before {
   background-image: url('../img/red_heart.png');
+}
+.meme .content .compound-button[name="share"]:after {
+  content: 'Share';
+  display: block;
 }
