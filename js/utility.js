@@ -46,8 +46,10 @@ var UTILITY = function (namesapce){
             $div.appendTo($('body'));
 
             var $img = $('<img/>').attr('src', src).appendTo($div);
-            $img.imagesLoaded(function($images, $proper, $broken){
-                if($proper.attr('src') === src){
+            $img.imagesLoaded(function(imageLoadedInstance){				
+				var loadingImage = imageLoadedInstance.images[0];
+				var $loadedImg = $(loadingImage.img);
+                if(loadingImage.isLoaded && $loadedImg.attr('src') === src){
                     var dimension = {width: $img.width(), height: $img.height()};
                     $img.remove();
                     deferred.resolve($img, dimension);
